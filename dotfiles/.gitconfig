@@ -1,0 +1,36 @@
+[user]
+	name = Daniel Paz-Soldan
+	email = daniel.pazsoldan@gmail.com
+[color]
+	ui = true
+[alias]
+  co = checkout
+  ci = commit
+  st = status -sb
+  br = branch
+  Dbr = branch | grep -v "master" | xargs git branch -D
+  dm = branch --list --merged master | grep -v "master" | grep -v "*"
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  branch-hist = git cherry -v master --abbrev
+  type = cat-file -t
+  dump = cat-file -p
+  latest = for-each-ref --count=12 --sort=-committerdate --format='%(committerdate:short) %(refname:short) [%(committername)]'
+  ds = diff --staged
+  ls = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short --no-abbrev-commit
+  standup = log --since '1 day ago' --oneline --author daniel.pazsoldan@gmail.com
+  last = for-each-ref --count=12 --sort=-committerdate refs/heads/ --format='%(refname:short)'
+  d = diff --color-words="[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+" --patience
+  gadd = "!f() { git status -sb | grep $1 | cut -f3 -d ' ' | xargs git add; }; f"
+  sshow = "!f() { git stash show stash^{/$*} -p; }; f"
+  sapply = "!f() { git stash apply stash^{/$*}; }; f"
+[push]
+	default = current
+[credential]
+	helper = osxkeychain
+[core]
+	excludesfile = /Users/danielpazsoldan/.gitignore_global
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
