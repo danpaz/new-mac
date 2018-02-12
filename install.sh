@@ -24,7 +24,7 @@ ln -sf ~/code/new-mac/dotfiles/.tmux.conf.local ~
 # Install node.
 #
 # nvm needs some extra configuration to work.
-# brew install nvm
+brew install nvm
 mkdir -p ~/.nvm
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
