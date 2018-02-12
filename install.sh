@@ -52,4 +52,6 @@ brew install bash
 brew install bash-completion
 sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
 chsh -s /usr/local/bin/bash
+# Re-login to actually change shell
+su - $USER
 source ~/.bash_profile
