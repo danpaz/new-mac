@@ -14,7 +14,7 @@ if [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
 fi
 
 ## Update prompt
-export PS1='\w$(__git_ps1 " (%s)") \$ '
+export PS1='\[\033[1;33m\]\w$(__git_ps1 " (%s)")\[\033[0m\] \$ '
 
 ## nvm configuration
 export NVM_DIR="$HOME/.nvm"
