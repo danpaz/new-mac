@@ -25,6 +25,9 @@ export PATH="./node_modules/.bin:${PATH}"
 ## Keep notes in dropbox
 export NOTEM_PATH="$HOME/Dropbox/notes"
 
+## AWS
+export AWS_PROFILE=default
+
 # Functions
 
 ## Start a shell in a docker container

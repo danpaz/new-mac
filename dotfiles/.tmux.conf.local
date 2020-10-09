@@ -268,8 +268,8 @@ tmux_conf_copy_to_os_clipboard=false
 
 # -- DAN's customizations -------------------------------------------------------
 
-# Mouse mode enabled.
-set -g mouse on
+# Mouse mode disabled.
+set -g mouse off
 
 # Key bindings.
 unbind C-b
@@ -295,3 +295,5 @@ set -g @plugin 'tmux-plugins/tmux-open'
 # Note: Must be at bottom of tmux.conf
 #
 run '~/.tmux/plugins/tpm/tpm'
+
+run-shell ~/.tmux/plugins/tmux-resurrect/resurrect.tmux

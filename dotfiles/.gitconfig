@@ -11,6 +11,7 @@
   Dbr = branch | grep -v "master" | xargs git branch -D
   dm = branch --list --merged master | grep -v "master" | grep -v "*"
   hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  changelog = log --pretty=format:'%s' --graph
   branch-hist = git cherry -v master --abbrev
   type = cat-file -t
   dump = cat-file -p
