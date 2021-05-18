@@ -38,3 +38,4 @@ dbash(){
 gadd() {
   git status -sb | grep initializers | cut -f3 -d ' ' | xargs git add
 }
+. "$HOME/.cargo/env"
