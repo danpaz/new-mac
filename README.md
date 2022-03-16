@@ -7,7 +7,7 @@ new machine. Intended only for OSX.
 
 ## Usage
 
-    sh -c "$(curl -fsSL) https://raw.githubusercontent.com/danpaz/new-mac/master/install.sh)"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/danpaz/new-mac/master/install.sh)"
 
 Certain steps in the install script will require confirmation or password input.
 
