@@ -15,8 +15,8 @@ mkdir -p ~/code
 git clone https://github.com/danpaz/new-mac ~/code/new-mac
 
 # Link dotfiles.
-ln -sf ~/code/new-mac/dotfiles/.bashrc ~
-ln -sf ~/code/new-mac/dotfiles/.bash_profile ~
+ln -sf ~/code/new-mac/dotfiles/.zshrc ~
+ln -sf ~/code/new-mac/dotfiles/.zshenv ~
 ln -sf ~/code/new-mac/dotfiles/.gitconfig ~
 ln -sf ~/code/new-mac/dotfiles/.tmux.conf ~
 ln -sf ~/code/new-mac/dotfiles/.tmux.conf.local ~
@@ -41,17 +41,3 @@ cargo install notem
 #
 # Configuration is already in place at ~/.tmux.conf and ~/.tmux.conf.local.
 brew install tmux
-
-# Configure shell.
-#
-# OS X ships with an older version of Bash. Newer one includes the extglob and
-# globstar options.
-# Install newer Bash to /usr/local/bin/bash, add it to the list of system
-# shells, and set it as default login shell:
-brew install bash
-brew install bash-completion
-sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
-chsh -s /usr/local/bin/bash
-# Re-login to actually change shell
-su - $USER
-source ~/.bash_profile
